@@ -21,7 +21,7 @@ public class GetInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail
-            int primaryKey = 1;
+            int primaryKey = 1555;
             // get Instructor Detail
             InstructorDetail instructorDetail = session.get(InstructorDetail.class, primaryKey);
             // print
@@ -32,7 +32,10 @@ public class GetInstructorDetailDemo {
 
 
             session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
+            session.close();
             factory.close();
         }
 
