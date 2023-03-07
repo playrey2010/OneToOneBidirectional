@@ -21,11 +21,11 @@ public class DeleteInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail
-            int primaryKey = 1;
+            int primaryKey = 5;
             // get Instructor Detail
             InstructorDetail instructorDetail = session.get(InstructorDetail.class, primaryKey);
             // delete instructor detail
-
+            instructorDetail.getInstructor().setInstructorDetail(null); // Really java... ?
             session.delete(instructorDetail);
 
 

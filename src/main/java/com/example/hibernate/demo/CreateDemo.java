@@ -28,8 +28,8 @@ public class CreateDemo {
             Instructor instructor = new Instructor("Chad","Darby","darby@example.com");
             InstructorDetail instructorDetail = new InstructorDetail("http://www.luv2code.com/youtube","Luv 2 code!!");
 
-            Instructor anotherInstructor = new Instructor("Nomad","Darby","darby@example.com");
-            InstructorDetail anotherInstructorDetail = new InstructorDetail("http://www.luv2code.com/youtube","Luv 2 code!!");
+            Instructor anotherInstructor = new Instructor("Nomad","Zhamur","zhamur@example.com");
+            InstructorDetail anotherInstructorDetail = new InstructorDetail("http://www.luv2code.com/youtube","Cooking!");
             // associate the objects
             instructor.setInstructorDetail(instructorDetail);
             anotherInstructor.setInstructorDetail(anotherInstructorDetail);
@@ -39,7 +39,7 @@ public class CreateDemo {
             // save the instructor (and instructor detail because of CascadeType.ALL
             System.out.println("Saving instructor: " + instructor);
 
-            session.save(anotherInstructor);
+            session.save(instructor);
 
 
             // commit transaction
